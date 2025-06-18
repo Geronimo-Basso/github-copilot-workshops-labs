@@ -8,8 +8,6 @@ This repository contains a collection of challenges to improve your skills with 
 - [GitHub Copilot](https://copilot.github.com/) extensions installed.
 - Java 17 or higher
 - Maven 
-- [Jmeter](https://jmeter.apache.org/download_jmeter.cgi)
-- Access to SonarQube (or a local instance running with Docker)
 
 ## Getting started
 
@@ -65,16 +63,3 @@ In this challenge, you will create unit tests for the API. You will need to crea
 ### Improve test coverage and quality
 
     In this challenge, you will improve the test coverage and quality of the tests. You will ask GitHub Copilot to recommend improvements to the test coverage and how you can check current coverage locally.
-
-    Also, integrate your IDE with SonarQube and improve your code quality with the help of GitHub Copilot.
-
-NOTE: Detailed instructions on how to integrate your IDE with SonarQube are available in the [SONAR.md](SONAR.md) file.
-
-### Performance testing
-
-    Implement performance tests for the API. You will need to create a JMeter test plan to test the performance of the API. The test plan should include the following:
-    - A sequence of calls: create, update, read and delete.
-    - Extract the id from the create call and use it in the update, read, and delete calls.
-    - Use assertions to validate the response of the calls.
-
-    Remember that you need to have [Jmeter](https://jmeter.apache.org/download_jmeter.cgi) installed to complete this challenge.
