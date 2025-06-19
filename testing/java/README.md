@@ -18,9 +18,9 @@ This repository contains a collection of challenges to improve your skills with 
 
 ### Understand the API
 
-    This challenge is about understanding the API that you are going to test. You will need to document the API and understand the endpoints, request and response payloads, and the expected behavior of the API. Create also examples of curl commands to interact with the API.
-
-    The output should be a markdown file with the API documentation.
+    "The first challenge is about understanding the API that you are going to test. You will need to  understand the endpoints, request and response payloads, and the expected behavior of the API. Create also examples of curl commands to interact with the API.
+ 
+    The output should be a markdown file with the API requests for each endpoint."
 
 ### Create unit tests
 
