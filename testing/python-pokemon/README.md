@@ -73,7 +73,7 @@ Lo primero que se quiere conseguir, es generar la estructura del proyecto con el
    
    - Definir la clase Pokemon en `models.py`. Pídele a Copilot que te genere una clase llamada Pokemon y que tenga atributos como id, nombre del pokemon y su tipo.
 
-   - Configurar las rutas en `routes.py`. Pídele a Copilot que te genere las rutas de la API. Unos ejemplos de rutas pueden ser GET todos los pokemon, GET pokemon por id, POST pokemon, DELETE pokemon por id...
+   - Configurar las rutas en `routes.py`. Pídele a Copilot que te genere las rutas de la API. Unos ejemplos de rutas pueden ser GET todos los pokemon, GET pokemon por id, POST pokemon, DELETE pokemon por id o GET buscar pokemon por nombre...
 
 
 **Ejecutar la aplicación**:
@@ -100,9 +100,43 @@ Crea un archivo nuevo para el testeo llamado test_routes.py con Copilot. Pídele
 
         - TIP: si no te pasan todos los tests, prueba a pasarle los logs de error a Copilot para que haga troubleshooting del posible error. Puedes usar custom_instructions.md para que darle cierto formato a tus tests.
 
+**Cobertura de codigo**:
+Píde a Copilot que quieres saber la cobertura de código de tus tests. 
+
+- TIP: Puedes usar `pytest-cov` para esto. Instala la dependencia en tu entorno virtual:
+```bash
+pip install pytest-cov
+```
+
 **Crear documentacion**:
 Si no se ha generado un README.md, genéralo con Copilot. Pídele que cree documentación de tu app.
 
-## Notas
-Puedes ser todo lo creativo que quieras y elevar este lab a la experiencia que tengas desarrollando. Prueba a crear mas clases, funcionalidades, tests si así lo deseas.
+**Avanzado**:
 
+***Implementar servicio externo para datos de Pokémon***:
+  Pídele a Copilot que implemente un servicio externo que devuelva datos de Pokémon. Puedes usar una API pública como `https://pokeapi.co/api/v2`.
+  
+  Recuerda añadir un carpeta `services` y un archivo `pokemon_service.py` donde se implementará la lógica para consumir esta API.
+
+***Amplia el modelo de Pokémon***:
+  Pídele a Copilot que amplíe el modelo de Pokémon para incluir más atributos, como habilidades, estadísticas, etc. 
+  
+  Actualiza la clase `Pokemon` en `models.py` y ayudate de Copilot para ajustar las rutas y tests según sea necesario.
+
+***Separar la logica de datos en un repositorio***:
+  Crea un repositorio de datos para manejar la persistencia de los Pokémon. Pídele a Copilot que extraiga a un repositorio en `app/repository/pokemon_repository.py` la lógica de datos que tenemos en nuestra app para que maneje las operaciones definidas anteriormente.
+- NOTA: No olvides actualizar las rutas y tests para reflejar estos cambios.
+
+***Añade tests con mocks***:
+  Pídele a Copilot que implemente tests unitarios simulando por ejemplo la respuesta de la API externa de Pokémon. 
+
+***Tests parametrizados parar mejorar cobertura***:
+  Pídele a Copilot que implemente tests parametrizados para cubrir diferentes casos de uso en tus rutas. Puedes usar `pytest.mark.parametrize` para esto.
+  
+  - Recuerda revisar tu cobertura de código después de añadir estos tests.
+
+**Actualiza la documentacion**:
+Pídele a Copilot que actualice la documentacion de tu app con los últimos cambios que has realizado. Recuerda que puedes usar custom_instructions.md para darle cierto formato a la documentación.
+
+## Recuerda
+Puedes ser todo lo creativo que quieras y elevar este laboratorio a la experiencia que tengas desarrollando. Prueba a crear mas clases, funcionalidades extra, añade autenticacion, o tests si así lo deseas.
