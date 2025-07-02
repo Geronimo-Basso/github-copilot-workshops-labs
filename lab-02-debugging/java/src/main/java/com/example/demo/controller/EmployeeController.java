@@ -71,4 +71,12 @@ public class EmployeeController {
         employeeService.deleteEmployee(id);
         logger.info("Salida: void");
     }
+
+    @GetMapping("/externalEmployees")
+    public List<Employee> getExternalEmployees() {
+        logger.info("Entrada: GET /api/employees/GetExternalEmployees");
+        List<Employee> externalEmployees = employeeService.getExternalEmployees();
+        logger.info("Salida: {}", externalEmployees);
+        return externalEmployees;
+    }
 }

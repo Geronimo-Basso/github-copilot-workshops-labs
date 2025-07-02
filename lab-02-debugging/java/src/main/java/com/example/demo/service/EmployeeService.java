@@ -31,4 +31,8 @@ public class EmployeeService {
     public Employee findEmployeeByEmail(String email) {
         return employeeRepository.findByEmail(email).orElse(null);
     }
+
+    public List<Employee> getExternalEmployees() {
+        throw new UnsupportedOperationException("Unimplemented method 'getExternalEmployees'");
+    }
 }
